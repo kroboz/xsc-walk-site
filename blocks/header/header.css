@@ -211,7 +211,9 @@ header nav[aria-expanded='true'] .nav-tools li {
   }
 
   header nav .nav-sections {
-    display: unset;
+    display: flex;
+    justify-content: flex-end;
+    
   }
 
   header nav .nav-brand {
