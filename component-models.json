@@ -1,0 +1,294 @@
+[
+  {
+    "id": "title",
+    "fields": [
+      {
+        "component": "text-input",
+        "valueType": "string",
+        "name": "jcr:title",
+        "value": "",
+        "label": "Text"
+      },
+      {
+        "component": "select",
+        "name": "type",
+        "value": "h1",
+        "label": "Type",
+        "valueType": "string",
+        "options": [
+          {
+            "name": "h1",
+            "value": "h1"
+          },
+          {
+            "name": "h2",
+            "value": "h2"
+          },
+          {
+            "name": "h3",
+            "value": "h3"
+          },
+          {
+            "name": "h4",
+            "value": "h4"
+          },
+          {
+            "name": "h5",
+            "value": "h5"
+          },
+          {
+            "name": "h6",
+            "value": "h6"
+          }
+        ]
+      },
+      {
+        "component": "text-input",
+        "valueType": "string",
+        "name": "href",
+        "value": "",
+        "label": "Link"
+      }
+    ]
+  },
+  {
+    "id": "image",
+    "fields": [
+      {
+        "component": "reference",
+        "valueType": "string",
+        "name": "fileReference",
+        "label": "Image",
+        "multi": false
+      },
+      {
+        "component": "text-input",
+        "valueType": "string",
+        "name": "alt",
+        "value": "Default alt",
+        "label": "Alt Text"
+      }
+    ]
+  },
+  {
+    "id": "button",
+    "fields": [
+      {
+        "component": "text-input",
+        "valueType": "string",
+        "name": "href",
+        "value": "",
+        "label": "Link"
+      },
+      {
+        "component": "text-input",
+        "valueType": "string",
+        "name": "text",
+        "value": "",
+        "label": "Text"
+      },
+      {
+        "component": "select",
+        "name": "type",
+        "value": "",
+        "label": "Type",
+        "valueType": "string",
+        "options": [
+          {
+            "name": "default",
+            "value": ""
+          },
+          {
+            "name": "primary",
+            "value": "primary"
+          },
+          {
+            "name": "secondary",
+            "value": "secondary"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "columns",
+    "fields": [
+      {
+        "component": "text-input",
+        "valueType": "number",
+        "name": "columns",
+        "value": "",
+        "label": "Columns"
+      },
+      {
+        "component": "text-input",
+        "valueType": "number",
+        "name": "rows",
+        "value": "",
+        "label": "Rows"
+      }
+    ]
+  },
+  {
+    "id": "section",
+    "fields": [
+      {
+        "component": "text-input",
+        "name": "style",
+        "value": "",
+        "label": "Style",
+        "valueType": "string"
+      }
+    ]
+  },
+  {
+    "id": "slide",
+    "fields": [
+      {
+        "component": "reference",
+        "valueType": "string",
+        "name": "image",
+        "label": "Image",
+        "multi": false
+      },
+      {
+        "component": "text-area",
+        "name": "text",
+        "value": "",
+        "label": "Text",
+        "valueType": "string"
+      }
+    ]
+  },
+  {
+    "id": "teaser",
+    "fields": [
+      {
+        "component": "reference",
+        "valueType": "string",
+        "name": "image",
+        "label": "Image",
+        "multi": false
+      },
+      {
+        "component": "text-area",
+        "name": "text",
+        "value": "",
+        "label": "Text",
+        "valueType": "string"
+      }
+    ]
+  },
+  {
+    "id": "hero",
+    "fields": [
+      {
+        "component": "reference",
+        "valueType": "string",
+        "name": "image",
+        "label": "Image",
+        "multi": false
+      },
+      {
+        "component": "text-area",
+        "name": "text",
+        "value": "",
+        "label": "Text",
+        "valueType": "string"
+      }
+    ]
+  },  
+  {
+    "id": "content-fragment",
+    "fields": [
+      {
+        "component": "text-input",
+        "name": "text",
+        "value": "",
+        "label": "Slug",
+        "valueType": "string"
+      }
+    ]
+  },
+  {
+    "id": "featured-article",
+    "fields": [
+      {
+        "component": "text-input",
+        "name": "reference",
+        "value": "",
+        "label": "Reference",
+        "valueType": "string"
+      }
+    ]
+  },
+  {
+    "id": "blockquote",
+    "fields": [
+      {
+        "component": "text-area",
+        "name": "quote",
+        "value": "",
+        "label": "Quote",
+        "valueType": "string"
+      },
+      {
+        "component": "text-input",
+        "name": "author",
+        "value": "",
+        "label": "Author",
+        "valueType": "string"
+      }
+    ]
+  },
+  {
+    "id": "tab",
+    "fields": [
+      {
+        "component": "text-input",
+        "name": "tab",
+        "value": "",
+        "label": "Tab",
+        "valueType": "string"
+      }
+    ]
+  },
+  {
+    "id": "activity-detail",
+    "fields": [
+      {
+        "component": "text-input",
+        "name": "label",
+        "value": "",
+        "label": "Label",
+        "valueType": "string"
+      },
+      {
+        "component": "text-input",
+        "name": "text",
+        "value": "",
+        "label": "Text",
+        "valueType": "string"
+      }
+    ]
+  },
+  {
+    "id": "accordeon-item",
+    "fields": [
+      {
+        "component": "text-input",
+        "name": "label",
+        "value": "",
+        "label": "Label",
+        "valueType": "string"
+      },
+      {
+        "component": "text-area",
+        "name": "text",
+        "value": "",
+        "label": "Text",
+        "valueType": "string"
+      }
+    ]
+  }
+]
