@@ -129,9 +129,9 @@ p, dl, ol, ul, pre, blockquote {
 }
 
 body p {
-  margin: 0 0 13.5px;
+  margin: 0 0 1.5em;
   font-size: 18px;
-  line-height: 2.5;
+  line-height: 1.5em;
 }
 
 a:any-link {
