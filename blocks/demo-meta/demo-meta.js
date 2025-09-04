@@ -1,39 +1,28 @@
 import { getMetadata } from '../../scripts/lib-franklin.js';
 
 export default function decorate(block) {
-  const author = getMetadata('author') || '';
-  const role = getMetadata('author-role') || '';
+  // 1) READ META
+  const author = (getMetadata('author') || '').trim();
+  const authorRole = (getMetadata('author-role') || '').trim();
 
-  if (!author && !role) {
+
+  // 2) GUARD RENDER
+  if (!author && !authorRole && !date) {
     block.remove();
     return;
   }
 
-  const wrap = document.createElement('div');
-  wrap.className = 'demo-meta__inner';
+  // 3) BUILD SINGLE-LINE OUTPUT
+  const $p = document.createElement('p');
+  $p.classList.add('demo-meta__byline');
+  $p.textContent =
+    "by: " + author +
+    (authorRole ? " – " + authorRole : "");
 
-  if (author) {
-    const name = document.createElement('span');
-    name.className = 'demo-meta__name';
-    name.textContent = author;
-    wrap.appendChild(name);
-  }
+  // 4) REPLACE BLOCK CONTENT
+  block.replaceChildren($p);
 
-  if (role) {
-    const sep = document.createElement('span');
-    sep.className = 'demo-meta__sep';
-    sep.textContent = ' – ';
-    wrap.appendChild(sep);
-
-    const r = document.createElement('span');
-    r.className = 'demo-meta__role';
-    r.textContent = role;
-    wrap.appendChild(r);
-  }
-
-  block.textContent = '';
-  block.appendChild(wrap);
-
+  // 5) OPTIONAL: MOVE TO TOP OF PAGE
   const section = block.closest('section');
   const main = document.querySelector('main');
   if (section && main && main.firstElementChild !== section) {
