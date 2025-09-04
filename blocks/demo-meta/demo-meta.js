@@ -16,7 +16,7 @@ export default function decorate(block) {
   const $p = document.createElement('p');
   $p.classList.add('demo-meta__byline');
   $p.textContent =
-    "by: " + author +
+    "by " + author +
     (authorRole ? " – " + authorRole : "");
 
   // 4) REPLACE BLOCK CONTENT
