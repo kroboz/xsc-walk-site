@@ -17,7 +17,7 @@ export default function decorate(block) {
   $p.classList.add('demo-meta__byline');
   $p.textContent =
     "by " + author +
-    (authorRole ? " – " + authorRole : ""); + (date > " - Last Update " + date : "");
+    (authorRole ? " – " + authorRole : "") + (date > " - Last Update " + date : "");
 
   // 4) REPLACE BLOCK CONTENT
   block.replaceChildren($p);
